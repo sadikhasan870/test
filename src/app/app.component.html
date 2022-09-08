@@ -1,0 +1,70 @@
+<!-- <nav class="navbar navbar-expand-lg nadvar-dark bg-warning">
+  <div class="container-fluid text-light">
+    <a href="#" class="navbar-brand">Student Information from</a>
+ 
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid text-center">
+    <h1 class="text-dark fw-bold" style="margin-left: 40%;">Student Information</h1>
+  </div>
+</nav>
+<mat-toolbar color="primary"><mat-toolbar-row>
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Manu</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-menu-item>About us</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  
+  <button mat-button [matMenuTriggerFor]="belowMenu">Student Class</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>class One </button>
+    <button mat-menu-item>class Two</button>
+    <button mat-menu-item>class Three</button>
+    <button mat-menu-item>class Four</button>
+    <button mat-menu-item>class Five</button>
+    <button mat-menu-item>class Six </button>
+    <button mat-menu-item>class Saven</button>
+    <button mat-menu-item>class Eight</button>
+    <button mat-menu-item>class Nine</button>
+    <button mat-menu-item>class Ten</button>
+
+
+
+
+
+  </mat-menu>
+  
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  
+  
+  <button mat-button [matMenuTriggerFor]="afterMenu">After</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button style="margin-left: 70%;" type="button" (click)="logOut()" class="btn btn-danger">
+    logout
+  </button>
+</mat-toolbar-row></mat-toolbar>
+
+<div class="bg-warning">
+  <form action="">
+    
+      <label for="gsearch"><h2 style="color:black;"> Search : </h2></label>
+
+    
+   
+    <input type="search" id="gsearch" name="gsearch">
+    <input type  ="submit"> 
+    
+</form> 
+</div>
+  
+
+  <router-outlet></router-outlet>
+

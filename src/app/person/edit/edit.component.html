@@ -1,0 +1,40 @@
+<h1 style="text-align:center;">Edit Item</h1>
+<p></p>
+<div class="container">
+    <legend>Create Item</legend>
+    <form>
+      <div class="mb-3">
+        <label for="txtName" class="form-label">Name</label>
+        <input type="text" name="name" [(ngModel)] = "personFrom.name" class="form-control" id="txtName" />
+      </div>
+      <div class="mb-3">
+        <label for="txtAddress" class="form-label">Address</label>
+        <input type="text" name="price" [(ngModel)] = "personFrom.address" class="form-control" id="txtAddress" />
+      </div>
+      <div class="mb-3">
+        <label for="txtPhone" class="form-label">Phone</label>
+        <input type="number" name="quantity" [(ngModel)] = "personFrom.phone" class="form-control" id="txtPhone" />
+      </div>
+
+      <div class="mb-3">
+        <label for="txtclass" class="form-label">Picture</label>
+        <input type="file" name="picture" accept="image/*" (change)="selectImage($event)" class="form-control" id="filepicture" />
+      </div>
+      <div class="mb-3">
+        <img style="max-width: 120px;" [src]="personFrom.picture" alt="">
+      </div>
+
+      <div class="mb-3">
+        <label for="txtclass" class="form-label">Class</label>
+        <input type="text"  name="class" [(ngModel)] = "personFrom.class" class="form-control" id="txtclass" />
+      </div>
+
+      <div class="mb-3">
+        <label for="txtsex" class="form-label">Sex</label>
+        <input  type="text" readonly name="sex" [(ngModel)] = "personFrom.sex" class="form-control" id="txtsex" />
+      </div>
+
+      <button type="button" (click)="update()" class="btn btn-primary">Create</button>
+    </form>
+  </div>
+
